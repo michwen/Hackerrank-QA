@@ -1,0 +1,2 @@
+load without hit to the db, loads the proxy and checks the cache return the proxy, temporary fake object with identifer and if not throws ObjectNotFoundException
+get hits to the db. fetch the db and save to the cache return the persistent instance and if not return null

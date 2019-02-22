@@ -1,0 +1,13 @@
+StringBuffer, StringBuilder and String are all objects. StringBuffer and StringBuilder both store in the Heap meaning their memories such as the memories that hold their String content can be dynamically modified, unlike the String object store in the String pool. 
+
+StringBuffer and StringBuilder can add, delete, and etc. the String message by evoking their methods. 
+
+StringBuffer and StringBuilder are classes that extend java.lang.object. They both can be created as they are objects via keyword such as new. JAVA StringBuffer is thread-safe, but StringBuilder is not. 
+
+StringBuilder and StringBuffer use more resources than String. StringBuffer is preferred if the content will be changed frequently and thus synchronous check is required.
+
+StringBuilder is usually preferred as it is faster though they come with no synchronization. StringBuffer which is slowest is preferred for handling any synchronous and thread-safety dynamics will or might take place in HPC as they are the only one that is thread-safe and synchronized. 
+
+StringBuffer and StringBuilder have similar functions but not identical function. The complete details can be easily checked as in the API manual.
+
+We can convert StringBuffer and StringBuilder to one another by passing their contents, the String, to one another via methods like toString, to achieve the back and forth conversions as if necessary.

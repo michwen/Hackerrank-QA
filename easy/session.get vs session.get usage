@@ -1,0 +1,5 @@
+ Employee an_employee = session.load(Employee.class,100);  
+ system.out.println(an_employee.getEmployeeId();      
+ system.out.println(an_employee.getEmployeeName();  
+ 
+ Employee an_employee = session.get(Employee.class,100); 

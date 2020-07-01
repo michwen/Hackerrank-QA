@@ -1,1 +1,3 @@
 # Hackerrank-QA
+
+ALL RIGHT RESERVED

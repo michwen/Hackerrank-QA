@@ -1,0 +1,24 @@
+SELECT ex.country, COALESCE(export,0), COALESCE(import,0) FROM(
+ 
+SELECT companies.country, sum(trades.value) as export
+FROM companies 
+FULL OUTER JOIN trades ON companies.name=trades.seller
+GROUP BY companies.country
+ORDER BY companies.country  
+
+) ex
+
+INNER JOIN
+
+(
+ 
+ 
+ 
+SELECT companies.country, sum(trades.value) as import
+FROM companies 
+FULL OUTER JOIN trades ON companies.name=trades.buyer
+GROUP BY companies.country
+ORDER BY companies.country
+) im
+
+ON  ex.country = im.country 
